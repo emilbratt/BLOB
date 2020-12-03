@@ -1,12 +1,13 @@
-This is my own implementation of the RSA public/private key encryption algorithm.
-It is in no way usable, but rather a practical way of showing you how the algorithm works.
+<h3>Description</h3>
+<p>This is a "demonstration" of the RSA public/private key encryption algorithm</p>
+<p>It is in no way usable, but rather a practical way of showing you how the algorithm works</p>
 
-It decrypts letter by letter and is really really slow. It is all done in software and as Python is
-notoriously slow in it self compared to compiled languages, this is a very bad implementation of the RSA encryption.
+<p>It decrypts letter by letter and is really really slow. It is all done in software and as Python is</p>
+<p>notoriously slow in it self compared to compiled languages, this is a very bad implementation of the RSA encryption</p>
 
-To add to the wound.. It only uses 3 digit prime numbers (again, any higher and you would be sitting there all day long).
-Yes, that is another red flag because when you connect to an encrypted website you are using primes with hundreds of digitsfor the RSA handshake.
+<p>Also, it only uses 3 digit prime numbers (again, any higher and you would be sitting there all day long)</p>
+<p>However, it can be viewed and interpreted for learning purposes</p>
 
 
-Anyways, I hope you learn something from it.
-Here is a great video demonstration of the algorithm. https://www.youtube.com/watch?v=4zahvcJ9glg
+<p>Anyways, I hope you learn something from it</p>
+<p>Here is a great video demonstration of the algorithm. https://www.youtube.com/watch?v=4zahvcJ9glg</p>
