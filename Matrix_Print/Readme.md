@@ -1,6 +1,6 @@
 <h3>Description</h3>
 <p>Prints a matrix of all the objects in a list</p>
-<p>I will add empty fields if the contents of the list dont add up with the grid</p>
+<p>The matrix function will add empty fields if the contents of the list dont add up with the grid so that it will print out nicely</p>
 
 <h3>Instruction</h3>
 <p>Import this file to your python script/app or just run matrix.py for a demo</p>
