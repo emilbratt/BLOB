@@ -5,8 +5,11 @@ from datetime import datetime
 
 
 
+def getTimeStamp():
+    return datetime.now().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-4]
 
-
+def getTime():
+    return datetime.now().strftime('%H:%M:%S')
 
 def getDate():
     return datetime.now().strftime("%Y-%m-%d")
@@ -44,4 +47,6 @@ print('date: '+getDate())
 print('weeknumber: '+getWeekNumber())
 print('month name: '+getMonth())
 print('weekday: '+getWeekDay())
+print('time: '+getTime())
+print('timestamp: '+getTimeStamp())
 exit()
