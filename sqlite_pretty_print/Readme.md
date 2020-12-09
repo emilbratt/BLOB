@@ -1,5 +1,5 @@
 <h3>Description</h3>
-<p>Prints out sqlite result of all the valuesin a nice matrix similar to mysql cli</p>
+<p>Prints out sqlite result of all the values in a nice matrix similar to mysql cli</p>
 <p>Loop directly through the function as described in the example on the bottom</p>
 <p>Store the result list and do something with it</p>
 
