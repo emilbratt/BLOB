@@ -71,8 +71,8 @@ while True:
     except ValueError:
         continue
 
-print(f'prime number 1 = {p}')
-print(f'prime number 2 = {q}')
+print(f'Prime number 1 = {p}')
+print(f'Prime number 2 = {q}')
 print(f'Product of both (N) = {N}')
 print(f'Coprime with N = {phiN}')
 print(f'Public key for encryption = {enc}')
