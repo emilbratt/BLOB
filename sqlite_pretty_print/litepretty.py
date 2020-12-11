@@ -103,10 +103,5 @@ if __name__ == '__main__':
     if i == rangeNum-1:
         genTuple.append(tuple(genList))
 
-    # first iteration in number generation is an empty tuple
-    # not gonna debug this for the sake of getting more important stuff done
-    # quick fix and off we go
-    del genTuple[0]
-
     for row in prettysql(genTuple):
         print(row)
