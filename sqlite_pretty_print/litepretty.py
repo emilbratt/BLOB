@@ -1,8 +1,9 @@
 
 
-def prettysql(records): # input = sql query result or list with tuples
+def prettysql(records, colnames=''): # input = sql query result or list with tuples
     '''
-        this function takes a list with tuple values
+        this function takes a sqlite object as first parameter
+        and optionally a colname tuple with columnheaders that is specifically added
 
         the format should be like this:
         [('val','val','val'),('val','val','val'),]
@@ -25,6 +26,15 @@ def prettysql(records): # input = sql query result or list with tuples
 
     '''
 
+    # extract tuples from parameters
+    buildRows = []
+    if colnames != '':
+        buildRows.append(colnames)
+    for row in records:
+        buildRows.append(tuple(row))
+    records = buildRows
+
+    # get number of columns
     numColumns = len(records[0]) # get number of columns
 
     # loop through each value and set a column width based
@@ -52,7 +62,7 @@ def prettysql(records): # input = sql query result or list with tuples
 
         for i in range(numColumns):
             try:
-                string += row[i].center(colWith[i])+'|'
+                string += str(row[i]).center(colWith[i])+'|'
             except IndexError:
                 # add dummy values if the row has less
                 # than values than columns
@@ -68,6 +78,66 @@ def prettysql(records): # input = sql query result or list with tuples
 
 # example usage
 if __name__ == '__main__':
+
+    # import sqlite3
+    import sqlite3
+
+    # create som queries to build, insert and select from database
+    createDummyTable = '''
+    CREATE TABLE IF NOT EXISTS users(
+        id     INTEGER PRIMARY KEY AUTOINCREMENT,
+        user   TEXT NOT NULL,
+        age   INTEGER DEFAULT 0,
+        description    TEXT NOT NULL
+        );
+    '''
+
+    insertDummyValues = '''
+    INSERT INTO users (
+        user,
+        age,
+        description
+    )
+    VALUES (
+        ?,?,?
+    );
+    '''
+
+    dummyValues = [
+    ('bob', 30,'retail'),
+    ('alice', 40,'accounting'),
+    ('jack', 35,'inventory'),
+    ]
+
+    selectFromTable = '''
+    SELECT * FROM users;
+    '''
+
+    colnames = (
+    'user id','user name','age','description',
+    )
+
+    # execute queries
+    conn = sqlite3.connect(":memory:")
+    cursor = conn.cursor()
+    cursor.execute(createDummyTable)
+    cursor.executemany(insertDummyValues,dummyValues)
+    conn.commit()
+
+
+    # this is how we use the prettysql statement
+    # save result from select query into variable
+    rows = cursor.execute(selectFromTable)
+
+    # pass variable into function and iterate over result
+    for row in prettysql(rows,colnames): # optional: pass the column names (tuple)
+        print(row)
+
+    # then we can close the connection
+    conn.close()
+
+
+    exit()
     import random
     # random is for use with the example generating
     # a random record of numbers with a random number of columns
@@ -83,8 +153,7 @@ if __name__ == '__main__':
     ('jane','20'),
     ]
 
-    for row in prettysql(myRecords):
-        print(row)
+
 
     # example with a list wih a random amount of rows and values
     genTuple = []
