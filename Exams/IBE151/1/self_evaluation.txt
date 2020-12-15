@@ -8,5 +8,6 @@ The program should have asked by printing out:
 Enter the distance in miles
 and the result should have contained:
 The distance in meters is: <answer>
+I forgot about the second text output..
 
 Overall, the math part was solved correctly and I moved on a bit too quick.
