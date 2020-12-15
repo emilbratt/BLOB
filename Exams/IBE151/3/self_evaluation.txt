@@ -1,0 +1,3 @@
+This task forces you to iterate through strings.
+I used the len() statement to skip all words with a length of 1 or less.
+After that it is just about adding each letter that matches the input letter.
