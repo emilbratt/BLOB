@@ -2,7 +2,7 @@
 
 def prettysql(records, colnames=''): # input = sql query result or list with tuples
     '''
-        this function takes a sqlite object as first parameter
+        this function takes a sqlite object or a list with tuples as first parameter
         and optionally a colname tuple with columnheaders that is specifically added
 
         the format should be like this:
@@ -80,6 +80,7 @@ def prettysql(records, colnames=''): # input = sql query result or list with tup
 if __name__ == '__main__':
 
 ##################################################################
+
     # example with a sqlite3 instance
 
     import sqlite3
@@ -119,6 +120,7 @@ if __name__ == '__main__':
     'user id','user name','age','description',
     )
 
+
     # execute queries
     conn = sqlite3.connect(":memory:")
     cursor = conn.cursor()
@@ -141,7 +143,7 @@ if __name__ == '__main__':
 ##################################################################
 
     # example with a list with a missing value
-    
+
     myRecords = [
     ('name','age','city'),
     ('bob','30','new york'),
@@ -152,16 +154,14 @@ if __name__ == '__main__':
     ('jane','20'),
     ]
 
-
     for row in prettysql(myRecords):
         print(row)
 
 ##################################################################
+
     # example with a list wih a random amount of rows and values
 
     import random
-    # random is for use with the example generating
-    # a random record of numbers with a random number of columns
 
     genTuple = []
     genList = []
@@ -181,4 +181,5 @@ if __name__ == '__main__':
 
     for row in prettysql(genTuple):
         print(row)
+
 ##################################################################
