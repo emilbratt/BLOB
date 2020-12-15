@@ -1,6 +1,6 @@
 
 
-def prettysql(records, colnames=''): # input = sql query result or list with tuples
+def prettysql(records, colnames=''):
     '''
         this function takes a sqlite object or a list with tuples as first parameter
         and optionally a colname tuple with columnheaders that is specifically added
