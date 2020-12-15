@@ -29,7 +29,7 @@ def prettysql(records, colnames=''): # input = sql query result or list with tup
     # extract tuples from parameters
     buildRows = []
     if colnames != '':
-        buildRows.append(colnames)
+        buildRows.append(colnames) # if colames where passed, append row
     for row in records:
         buildRows.append(tuple(row))
     records = buildRows
@@ -79,7 +79,9 @@ def prettysql(records, colnames=''): # input = sql query result or list with tup
 # example usage
 if __name__ == '__main__':
 
-    # import sqlite3
+##################################################################
+    # example with a sqlite3 instance
+
     import sqlite3
 
     # create som queries to build, insert and select from database
@@ -136,13 +138,10 @@ if __name__ == '__main__':
     # then we can close the connection
     conn.close()
 
-
-    exit()
-    import random
-    # random is for use with the example generating
-    # a random record of numbers with a random number of columns
+##################################################################
 
     # example with a list with a missing value
+    
     myRecords = [
     ('name','age','city'),
     ('bob','30','new york'),
@@ -154,8 +153,16 @@ if __name__ == '__main__':
     ]
 
 
+    for row in prettysql(myRecords):
+        print(row)
 
+##################################################################
     # example with a list wih a random amount of rows and values
+
+    import random
+    # random is for use with the example generating
+    # a random record of numbers with a random number of columns
+
     genTuple = []
     genList = []
     rangeNum = random.randint(16,28)
@@ -174,3 +181,4 @@ if __name__ == '__main__':
 
     for row in prettysql(genTuple):
         print(row)
+##################################################################
