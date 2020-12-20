@@ -134,7 +134,7 @@ if __name__ == '__main__':
     rows = cursor.execute(selectFromTable)
 
     # pass variable into function and iterate over result
-    for row in prettysql(rows,colnames): # optional: pass the column names (tuple)
+    for row in prettysql(rows,colnames): # optional: pass a 2nd argument -> column names (tuple)
         print(row)
 
     # then we can close the connection
