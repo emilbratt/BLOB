@@ -1,8 +1,0 @@
-I did solve this task, however..
-This could be solved much easier.
-
-Instead of using a while loop to iterate through all the items
-I could`ve used the "%" operator to calculate the remainder thus jumping straight
-to the correct item.
-Just after deliver, I spoke with Knut (another student) who also completed IBE 151
-and he tought me this which I didn`t realize until he showed me his answer.

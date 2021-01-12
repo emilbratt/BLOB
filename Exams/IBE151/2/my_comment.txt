@@ -1,2 +1,0 @@
-I think I answer this task correctly. By using the modulo operator
-in python I am able to calculate the numers that are divisable by 10 and positive.
