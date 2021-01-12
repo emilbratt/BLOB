@@ -1,0 +1,18 @@
+This was a tough one. Had to come back to this one a couple of times.
+
+After analyzing the task I did realize that I only had to concider these rows:
+# queen can always take on chessBoard[0][0] and on chessBoard[-1][-1]
+# queen can reach first square and last square on row 1
+# queen can reach 2nd position and 2nd last position on row 2
+# queen can reach 3nd position and 3rd last position on row 3
+# and so on.......
+
+After imagining these in my head, I was able to transfer this to code.
+Watching how other students solved this I also realized that I could solve this
+in many fewer lines.
+For example: I did not have to create a virtual chessboard using lists, but I think it
+shows the idea I had in my head.
+I still think that my solution is alot easier for the
+human brain to interpret as I am a fan of "self-explaining code".
+
+Though.. In production, I would refrain from writing unecessary lines.

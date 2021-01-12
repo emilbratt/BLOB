@@ -4,7 +4,7 @@
 <p>Store the result list and do something with it</p>
 
 <h3>Instruction</h3>
-<p>Import this file to your python script/app or just run litepretty.py for a demo</p>
+<p>Import this file to your python script/app or just run prettyquery.py for a demo</p>
 
 <h3>Dependencies:</h3>
 <p>Barebone Python 3 installation</p>

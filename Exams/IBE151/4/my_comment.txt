@@ -1,0 +1,8 @@
+On this task, as on the first task; I messed up a small detail.
+I was supposed to pass the filename as a parameter in the function.
+Next time I will have to read the exercise more carefully.
+
+I did however solve this task with as few methods as possible.
+No split() and no strip().
+The longest word is found by using the len() function and assigning the word with
+the greatest length to a variable and returning it.

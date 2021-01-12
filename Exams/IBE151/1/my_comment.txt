@@ -1,0 +1,13 @@
+The task was to write a program that takes an input and converts it from miles to meter
+
+
+
+I did not pay enough attention to the question in part where I was suppose to
+add a printed text.
+The program should have asked by printing out:
+Enter the distance in miles
+and the result should have contained:
+The distance in meters is: <answer>
+I forgot about the second text output..
+
+Overall, the math part was solved correctly and I moved on a bit too quick.
